@@ -7,13 +7,21 @@
 //
 
 #include <iostream>
-#define N 5
+#include <stdio.h>
+#include <stdlib.h>
+//#define N 5
 
 int main(int argc, const char * argv[])
 {
     int i,j;
+    int *a;
+    int N;
     int t;
-    int a[N];
+    scanf("%d",&N);
+    a=new int[N];
+    if(a==0)
+        exit(0);
+   
     for(i=0;i<N;i++)
     {
         scanf("%d",&a[i]);
@@ -34,10 +42,7 @@ int main(int argc, const char * argv[])
     {
         printf("%d\n",a[i]);
     }
-    
-    
-    
-    
+    delete a;
     
     return 0;
 }
